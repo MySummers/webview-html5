@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+    //以下为写死的数据直接跳转，原则上后台能动态的给出对应的值并通过点击事件传值到原生方法中，达到传值并跳转原生页面的效果。
+    //controllerName对应的名字为原生页面控制器的类名
+    //controllerProperties则是字典，包含了上面控制器对应的属性名和值，相当于键值对，即需要传给原生页面的值
+    //A控制器需要传的值
+    var controllerNameA = "AViewController";
+    var controllerPropertiesA = { "prodId": "1001", "prodName": "吸尘器", "prodPrice": "50元" };
+    //B控制器需要传的值
+    var controllerNameB = "BViewController";
+    var controllerPropertiesB = { "petId": "1002", "petName": "趴趴熊", "petPrice": "100万" };
+    //C控制器需要传的值
+    var controllerNameC = "CViewController";
+    var controllerPropertiesC = { "personId": "1003", "personName": "Tom", "personSex": "变态" };
+    //这里定义了跳转方法，点击事件会执行下面的方法并传至给原生方法
+    function jumpToController(controllerName,controllerProperties) {
+    }
+</script>
+<body bgcolor="#555555">
+    <!--下面为3个跳转到对应页面的按钮-->
+<button type="button"  onclick="jumpToController(controllerNameA,controllerPropertiesA)">点击传至并跳转到A控制器</button>
+<button type="button"  onclick="jumpToController(controllerNameB,controllerPropertiesB)">点击传至并跳转到B控制器</button>
+<button type="button"  onclick="jumpToController(controllerNameC,controllerPropertiesC)">点击传至并跳转到C控制器</button>
+</body>
+</html>
